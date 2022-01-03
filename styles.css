@@ -1,0 +1,135 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 64.5%;
+}
+
+body {
+  font-family: "Outfit";
+  font-size: 1.8rem;
+  background-color: var(--main-bg);
+  color: var(--soft-blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.title {
+  margin: 1rem 0;
+  color: var(--white);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 9px;
+  padding: 2rem;
+}
+
+.nft-img {
+  border-radius: 9px;
+}
+
+.nft--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0rem;
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 3rem;
+}
+
+.nft--info {
+  display: flex;
+  align-items: center;
+}
+
+.nft--icon {
+  margin-right: 1rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 4rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.avatar--name {
+  color: var(--white);
+}
+
+/* hover effects */
+.title:hover,
+.nft--info:first-child:hover,
+.avatar--name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.image-container {
+  position: relative;
+}
+
+.overlay {
+  background-color: hsl(178, 100%, 50%, 60%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% - 0.3rem);
+  border-radius: 4px;
+  z-index: 2;
+  opacity: 0;
+  transform: all 0.3s ease;
+}
+
+.overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay--icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 34em) {
+  .container {
+    margin: 0 auto 1rem;
+    width: 35rem;
+  }
+}
